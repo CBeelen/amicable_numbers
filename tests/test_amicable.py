@@ -1,6 +1,6 @@
 import unittest
 
-from amicable_numbers import get_divisors
+from src.amicable_numbers import get_divisors
 
 
 class DivisorTests(unittest.TestCase):
