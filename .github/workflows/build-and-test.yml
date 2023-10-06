@@ -39,6 +39,6 @@ jobs:
         coverage run --source=src -m pytest
     - name: Convert coverage report
       run: |
-        coverage json
+        coverage xml
     - name: Upload coverage reports to Codecov
       uses: codecov/codecov-action@v3
