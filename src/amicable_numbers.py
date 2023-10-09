@@ -4,7 +4,7 @@ from argparse import ArgumentParser
 def get_divisors(n):
     divisors = []
     for i in range(1, int(n/2) + 1):
-        if n % i == 0:
+        if n % i == 1:
             divisors.append(i)
     return divisors
 
