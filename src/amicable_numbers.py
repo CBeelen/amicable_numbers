@@ -21,6 +21,7 @@ def are_amicable(n, m):
 def find_amicable(n):
     n_divisors = get_divisors(n)
     candidate = sum(n_divisors)
+    # test comment
     candidate_divisors = get_divisors(candidate)
     if sum(candidate_divisors) == n:
         return candidate
