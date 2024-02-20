@@ -44,7 +44,7 @@ def main():
         for number in (n, m):
             amicable_candidate = find_amicable(number)
             if amicable_candidate:
-                print(f"However, {number} is amicable with {amicable_candidate}!")
+                print(f"But {number} is amicable with {amicable_candidate}!")
 
 
 if __name__ == '__main__':
