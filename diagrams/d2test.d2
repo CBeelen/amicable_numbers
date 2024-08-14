@@ -1,0 +1,10 @@
+ingest API -> elasticsearch.stage -> elasticsearch.bronze -> elasticsearch.silver -> elasticsearch.gold
+
+BM -> elasticsearch.gold
+BM.shape: page
+elasticsearch.stage.shape: cylinder
+elasticsearch.bronze.shape: cylinder
+elasticsearch.silver.shape: cylinder
+elasticsearch.gold.shape: cylinder
+elasticsearch.(stage -> bronze)[0]: stage_to_bronze
+elasticsearch.(bronze -> bronze): Anomalies

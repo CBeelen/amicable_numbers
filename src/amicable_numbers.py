@@ -18,6 +18,17 @@ def are_amicable(n, m):
     return False
 
 
+def find_amicable(n):
+    n_divisors = get_divisors(n)
+    candidate = sum(n_divisors)
+    # test comment
+    candidate_divisors = get_divisors(candidate)
+    if sum(candidate_divisors) == n:
+        return candidate
+    else:
+        return None
+
+
 def main():
     parser = ArgumentParser()
     parser.add_argument('n', help="First number")
@@ -31,6 +42,10 @@ def main():
               f"which means that the sum of the proper divisors of one number is the other number, and vice versa.")
     else:
         print(f"Sorry, {n} and {m} are not amicable numbers :(")
+        for number in (n, m):
+            amicable_candidate = find_amicable(number)
+            if amicable_candidate:
+                print(f"But {number} is amicable with {amicable_candidate}!")
 
 
 if __name__ == '__main__':
